@@ -5,6 +5,10 @@
 #![no_std]
 #![no_main]
 
+use core::cell::RefCell;
+use esp32_hal::gpio::{Gpio32, Input, PullDown};
+use critical_section::Mutex;
+
 use esp32_hal::{
     clock::ClockControl,
     gpio::IO,
@@ -16,6 +20,8 @@ use esp32_hal::{
 };
 use esp_backtrace as _;
 use xtensa_lx_rt::entry;
+
+static BUTTON: Mutex<RefCell<Option<Gpio32<Input<PullDown>>>>> = Mutex::new(RefCell::new(None));
 
 #[entry]
 fn main() -> ! {
