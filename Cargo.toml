@@ -1,0 +1,17 @@
+[package]
+name = "magic_light"
+version = "0.1.0"
+authors = ["wrazik <wojciech.razik@gmail.com>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+esp32-hal = "0.7.0"
+critical-section = "1.1.1"
+esp-println = "0.3.1"
+esp-backtrace = { version = "0.4.0", features = ["esp32", "panic-handler", "print-uart"] }
+xtensa-lx-rt = { version = "0.14.0", features = ["esp32"], optional = true }
+
+[features]
+default = ["rt"]
+rt = ["xtensa-lx-rt"]
