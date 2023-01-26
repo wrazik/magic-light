@@ -133,8 +133,7 @@ dependencies = [
 [[package]]
 name = "esp-hal-common"
 version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "007db8d84050d19fec367bece124cccbdf6837ff0ea8e1a4fc04599148ab5ea1"
+source = "git+https://github.com/esp-rs/esp-hal/#573c517235f3f7c87a0fd82c1837b0fec982faa8"
 dependencies = [
  "cfg-if",
  "critical-section",
@@ -146,6 +145,7 @@ dependencies = [
  "lock_api",
  "nb 1.0.0",
  "paste",
+ "strum",
  "void",
  "xtensa-lx",
  "xtensa-lx-rt",
@@ -154,8 +154,7 @@ dependencies = [
 [[package]]
 name = "esp-hal-procmacros"
 version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7dd1fb5018ef2c57daadf84e9bbff1c9e48c04958d32bc1469f781a96ec82e8e"
+source = "git+https://github.com/esp-rs/esp-hal/#573c517235f3f7c87a0fd82c1837b0fec982faa8"
 dependencies = [
  "darling",
  "proc-macro-error",
@@ -172,9 +171,9 @@ checksum = "adcfe5d532cf2029b11996cab6b4af948f41c24b131c76422115634711549aaa"
 
 [[package]]
 name = "esp32"
-version = "0.17.0"
+version = "0.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1bba88ea125f6f224121dc96af129b74c5e2a14952891b745e09bc6f477274ed"
+checksum = "0a00b5ec938fac8acc653897c17d42751306279339aba286801e51bd433aa875"
 dependencies = [
  "critical-section",
  "vcell",
@@ -185,8 +184,7 @@ dependencies = [
 [[package]]
 name = "esp32-hal"
 version = "0.7.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e347e1f9701cfb58ac383fa41e7ea714ed309f293b1e9272394d9ea9b89f36ad"
+source = "git+https://github.com/esp-rs/esp-hal/#573c517235f3f7c87a0fd82c1837b0fec982faa8"
 dependencies = [
  "embedded-hal",
  "esp-hal-common",
@@ -399,6 +397,9 @@ name = "strum"
 version = "0.24.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "063e6045c0e62079840579a7e47a355ae92f60eb74daaf156fb1e84ba164e63f"
+dependencies = [
+ "strum_macros",
+]
 
 [[package]]
 name = "strum_macros"
